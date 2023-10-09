@@ -8,7 +8,7 @@ export default defineConfig({
   title: 'root-website-cms',
 
   projectId: 'hhcee8on',
-  dataset: 'production',
+  dataset: 'dev',
 
   plugins: [deskTool(), visionTool()],
 
