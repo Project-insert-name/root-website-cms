@@ -55,12 +55,18 @@ export default defineType({
 			type: "image",
 			title: "Bilde",
 			description: "Bilde som vises på stillingsannonsen",
-		}),
-		defineField({
-			name: "image_alt",
-			type: "string",
-			title: "Bilde tekst",
-			description: "Tekst som beskriver bildet",
+			options: {
+				hotspot: true,
+			},
+			fields: [
+				{
+					name: "alt",
+					type: "string",
+					title: "Bilde tekst",
+					description: "Tekst som beskriver bildet",
+					validation: (Rule) => Rule.required(),
+				},
+			],
 		}),
 	],
 })
